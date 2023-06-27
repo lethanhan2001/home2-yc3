@@ -9,7 +9,7 @@ import useSize from "../../hooks/useSize";
 import Footer1 from "../../images/footer1.png";
 import Footer2 from "../../images/footer2.png";
 import Footer3 from "../../images/footerbottm.png";
-import { Box, style, styled } from "@mui/system";
+import { Box, styled } from "@mui/system";
 import { Grid, Typography } from "@mui/material";
 
 const One = styled("div")({
