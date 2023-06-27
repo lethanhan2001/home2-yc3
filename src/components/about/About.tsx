@@ -71,7 +71,9 @@ const About = () => {
                 }
           }
         >
-          <Typography variant="h6">About Us</Typography>
+          <Typography sx={{ fontSize: "16px", fontWeight: "600" }} variant="h6">
+            About Us
+          </Typography>
           <Typography
             variant="h3"
             sx={{

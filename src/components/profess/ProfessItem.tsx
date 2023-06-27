@@ -44,7 +44,7 @@ const ProfessItem: React.FC<ProfessItems> = ({ item }) => {
         <Typography
           variant="h6"
           sx={{
-            fontSize: "18px",
+            fontSize: "16px",
             fontWeight: "600",
             color: "#ff64ae",
             marginTop: "32px",

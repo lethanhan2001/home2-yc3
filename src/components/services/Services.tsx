@@ -40,7 +40,9 @@ const Services = () => {
       </Box>
 
       <Box sx={{ textAlign: "center", marginTop: "100px" }}>
-        <Typography variant="h6">Main Services</Typography>
+        <Typography variant="h6" sx={{ fontSize: "16px", fontWeight: "600" }}>
+          Main Services
+        </Typography>
         <Typography
           variant="h4"
           sx={{ fontSize: "36px", fontWeight: "600", color: "#091156" }}

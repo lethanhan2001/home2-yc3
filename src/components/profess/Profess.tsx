@@ -16,7 +16,9 @@ const Profess: React.FC = () => {
           marginTop: "100px",
         }}
       >
-        <Typography variant="h6">Professional Teams</Typography>
+        <Typography sx={{ fontSize: "16px", fontWeight: "600" }} variant="h6">
+          Professional Teams
+        </Typography>
         <Typography
           variant="h4"
           sx={{

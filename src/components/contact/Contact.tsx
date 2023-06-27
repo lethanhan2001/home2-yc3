@@ -16,10 +16,11 @@ const theme = createTheme({
       main: "#ff64ae",
     },
     secondary: {
-      main: "#ff4081",
+      main: "#D9DDFE",
     },
   },
 });
+
 const Images = styled("img")();
 
 const Title = styled("p")({
@@ -89,42 +90,58 @@ const Contact = () => {
                     alignItems: "center",
                   }}
                 >
-                  <TextField
-                    sx={{
-                      width: "242px",
-                      height: "62px",
-                      borderRadius: "15px",
-                      borderColor: "#d9ddfe",
-                      outline: "none",
-                      border: "none",
-                    }}
-                    type="text"
-                    placeholder="First name"
-                  />
-                  <TextField
-                    sx={
-                      width < 650
-                        ? {
-                            width: "242px",
-                            height: "62px",
-                            borderRadius: "15px",
-                            borderColor: "#d9ddfe",
-                            outline: "none",
-                            border: "none",
-                          }
-                        : {
-                            width: "242px",
-                            height: "62px",
-                            borderRadius: "15px",
-                            borderColor: "#d9ddfe",
-                            outline: "none",
-                            border: "none",
-                            marginLeft: "32px",
-                          }
-                    }
-                    type="text"
-                    placeholder="Last name"
-                  />
+                  <ThemeProvider theme={theme}>
+                    <TextField
+                      InputProps={{
+                        style: {
+                          borderRadius: "15px",
+                        },
+                      }}
+                      color="secondary"
+                      focused
+                      sx={{
+                        width: "242px",
+                        height: "62px",
+                        borderRadius: "15px",
+                        borderColor: "#d9ddfe",
+                        outline: "none",
+                        border: "none",
+                      }}
+                      type="text"
+                      placeholder="First name"
+                    />
+                    <TextField
+                      InputProps={{
+                        style: {
+                          borderRadius: "15px",
+                        },
+                      }}
+                      color="secondary"
+                      focused
+                      sx={
+                        width < 650
+                          ? {
+                              width: "242px",
+                              height: "62px",
+                              borderRadius: "15px",
+                              borderColor: "#d9ddfe",
+                              outline: "none",
+                              border: "none",
+                            }
+                          : {
+                              width: "242px",
+                              height: "62px",
+                              borderRadius: "15px",
+                              borderColor: "#d9ddfe",
+                              outline: "none",
+                              border: "none",
+                              marginLeft: "32px",
+                            }
+                      }
+                      type="text"
+                      placeholder="Last name"
+                    />
+                  </ThemeProvider>
                 </Box>
                 <Box
                   sx={{
@@ -135,44 +152,62 @@ const Contact = () => {
                     margin: "0 auto",
                   }}
                 >
-                  <TextField
-                    sx={{
-                      width: "calc(100% + 20px)",
-                      height: "62px",
-                      paddingLeft: "20px",
-                      marginRight: "20px",
-                      borderRadius: "15px",
-                      outline: "none",
-                    }}
-                    type="email"
-                    placeholder="Email address"
-                  />
-                  <TextField
-                    sx={{
-                      width: "calc(100% + 20px)",
-                      height: "62px",
-                      paddingLeft: "20px",
-                      marginRight: "20px",
-                      marginTop: "30px",
-                      borderRadius: "15px",
-                      outline: "none",
-                    }}
-                    type="text"
-                    placeholder="Subject message"
-                  />
-                  <TextareaAutosize
-                    style={{
-                      width: "100%",
-                      height: "190px",
-                      padding: "20px",
-                      marginTop: "32px",
-                      borderRadius: "5px",
-                      outline: "none",
-                      border: "1px solid rgba(0,0,0,0.2)",
-                    }}
-                    typeof="text"
-                    placeholder="Your inquiry here"
-                  ></TextareaAutosize>
+                  <ThemeProvider theme={theme}>
+                    <TextField
+                      InputProps={{
+                        style: {
+                          borderRadius: "15px",
+                        },
+                      }}
+                      color="secondary"
+                      focused
+                      sx={{
+                        width: "calc(100% + 20px)",
+                        height: "62px",
+                        paddingLeft: "20px",
+                        marginRight: "20px",
+                        borderRadius: "15px",
+                        outline: "none",
+                      }}
+                      type="email"
+                      placeholder="Email address"
+                    />
+                    <TextField
+                      InputProps={{
+                        style: {
+                          borderRadius: "15px",
+                        },
+                      }}
+                      color="secondary"
+                      focused
+                      sx={{
+                        width: "calc(100% + 20px)",
+                        height: "62px",
+                        paddingLeft: "20px",
+                        marginRight: "20px",
+                        marginTop: "30px",
+                        borderRadius: "15px",
+                        outline: "none",
+                      }}
+                      type="text"
+                      placeholder="Subject message"
+                    />
+                    <TextareaAutosize
+                      color="secondary"
+                      style={{
+                        width: "100%",
+                        height: "190px",
+                        padding: "20px",
+                        marginTop: "32px",
+                        border: "1px solid",
+                        borderRadius: "15px",
+                        borderColor: "#D9DDFE",
+                        outline: "none",
+                      }}
+                      typeof="text"
+                      placeholder="Your inquiry here"
+                    ></TextareaAutosize>
+                  </ThemeProvider>
                 </Box>
               </Box>
 
@@ -215,7 +250,12 @@ const Contact = () => {
               <img src={ContactBg} alt="" />
             </Box>
             <Box sx={{ width: "50%" }}>
-              <Typography variant="h6">Contact Us</Typography>
+              <Typography
+                sx={{ fontSize: "16px", fontWeight: "600" }}
+                variant="h6"
+              >
+                Contact Us
+              </Typography>
               <Typography
                 variant="h4"
                 sx={{
@@ -241,57 +281,89 @@ const Contact = () => {
                     flexDirection: "row",
                   }}
                 >
-                  <TextField
-                    sx={{
-                      width: "242px",
-                      height: "62px",
-                      borderRadius: "15px",
-                      borderColor: "#d9ddfe",
-                      outline: "none",
-                      border: "none",
-                    }}
-                    type="text"
-                    placeholder="First name"
-                  />
-                  <TextField
-                    sx={{
-                      width: "242px",
-                      height: "62px",
-                      borderRadius: "15px",
-                      borderColor: "#d9ddfe",
-                      outline: "none",
-                      border: "none",
-                      marginLeft: "30px",
-                    }}
-                    type="text"
-                    placeholder="Last name"
-                  />
+                  <ThemeProvider theme={theme}>
+                    <TextField
+                      color="secondary"
+                      focused
+                      sx={{
+                        width: "242px",
+                        height: "62px",
+                        borderRadius: "15px",
+                        borderColor: "#d9ddfe",
+                        outline: "none",
+                        border: "none",
+                      }}
+                      type="text"
+                      placeholder="First name"
+                      InputProps={{
+                        style: {
+                          borderRadius: "15px",
+                        },
+                      }}
+                    />
+                    <TextField
+                      InputProps={{
+                        style: {
+                          borderRadius: "15px",
+                        },
+                      }}
+                      color="secondary"
+                      focused
+                      sx={{
+                        width: "242px",
+                        height: "62px",
+                        borderRadius: "15px",
+                        borderColor: "#d9ddfe",
+                        outline: "none",
+                        border: "none",
+                        marginLeft: "30px",
+                      }}
+                      type="text"
+                      placeholder="Last name"
+                    />
+                  </ThemeProvider>
                 </Box>
                 <Box>
-                  <TextField
-                    sx={{
-                      width: "100%",
-                      height: "62px",
+                  <ThemeProvider theme={theme}>
+                    <TextField
+                      color="secondary"
+                      focused
+                      sx={{
+                        width: "100%",
+                        height: "62px",
 
-                      marginTop: "30px",
-                      borderRadius: "15px",
-                      outline: "none",
-                    }}
-                    type="text"
-                    placeholder="Subject message"
-                  />
-                  <TextField
-                    sx={{
-                      width: "100%",
-                      height: "62px",
+                        marginTop: "30px",
+                        borderRadius: "15px",
+                        outline: "none",
+                      }}
+                      type="text"
+                      placeholder="Subject message"
+                      InputProps={{
+                        style: {
+                          borderRadius: "15px",
+                        },
+                      }}
+                    />
+                    <TextField
+                      InputProps={{
+                        style: {
+                          borderRadius: "15px",
+                        },
+                      }}
+                      color="secondary"
+                      focused
+                      sx={{
+                        width: "100%",
+                        height: "62px",
 
-                      marginTop: "30px",
-                      borderRadius: "15px",
-                      outline: "none",
-                    }}
-                    type="text"
-                    placeholder="Subject message"
-                  />
+                        marginTop: "30px",
+                        borderRadius: "15px",
+                        outline: "none",
+                      }}
+                      type="text"
+                      placeholder="Subject message"
+                    />
+                  </ThemeProvider>
 
                   <TextareaAutosize
                     style={{
@@ -299,9 +371,9 @@ const Contact = () => {
                       height: "190px",
                       padding: "20px",
                       marginTop: "32px",
-                      borderRadius: "5px",
+                      borderRadius: "15px",
                       outline: "none",
-                      border: "1px solid rgba(0,0,0,0.2)",
+                      border: "1px solid #D9DDFE",
                     }}
                     typeof="text"
                     placeholder="Your inquiry here"
