@@ -6,6 +6,7 @@ import { Typography } from "@mui/material";
 
 const Title = styled("p")({
   color: "#8b8b8b",
+  letterSpacing: "1.6px",
 });
 const Profess: React.FC = () => {
   return (
@@ -13,10 +14,18 @@ const Profess: React.FC = () => {
       <Box
         sx={{
           textAlign: "center",
-          marginTop: "100px",
+          marginTop: "-10px",
         }}
       >
-        <Typography sx={{ fontSize: "16px", fontWeight: "600" }} variant="h6">
+        <Typography
+          sx={{
+            fontSize: "16px",
+            fontWeight: "600",
+            marginBottom: "10px",
+            letterSpacing: "1px",
+          }}
+          variant="h6"
+        >
           Professional Teams
         </Typography>
         <Typography
@@ -25,6 +34,8 @@ const Profess: React.FC = () => {
             fontSize: "36px",
             fontWeight: "600",
             color: "#091156",
+            letterSpacing: "1.7px",
+            marginBottom: "20px",
           }}
         >
           The Professional expert
@@ -38,7 +49,7 @@ const Profess: React.FC = () => {
             display: "flex",
             justifyContent: "space-evenly",
             alignItems: "center",
-            marginTop: "50px",
+            margin: "113px 8%",
             flex: "1",
             flexWrap: "wrap",
             rowGap: "50px",

@@ -66,6 +66,7 @@ const Title = styled("p")({
   marginLeft: "30px",
   fontSize: "24px",
   fontWeight: "bold",
+  letterSpacing: "3.1px",
   color: "#091156",
 });
 
@@ -76,8 +77,9 @@ const NavTablet = styled("ul")({
 
 const NavItem = styled("li")({
   listStyle: "none",
-  margin: "0 30px",
+  margin: "0 28px",
   fontWeight: "400",
+  fontFamily: "Poppins",
   color: "#8B8B8B",
   ":first-child": {
     color: "#091156",
@@ -89,6 +91,7 @@ const NavItemMobile = styled("li")({
   listStyle: "none",
   margin: "32px 0",
   fontWeight: "400",
+  fontFamily: "Poppins",
   color: "#8B8B8B",
   ":first-child": {
     color: "#091156",
@@ -98,6 +101,7 @@ const NavItemMobile = styled("li")({
 
 const Texts = styled("p")({
   fontSize: "16px",
+  letterSpacing: "1.7px",
   fontWeight: "500",
   color: "#091156",
   marginTop: "24px",
@@ -111,6 +115,11 @@ const NavMobile = styled("ul")({
   alignItems: "center",
   justifyContent: "center",
   marginTop: "100px",
+});
+
+const ContactBtn = styled("button")({
+  width: "158px",
+  height: "52px",
 });
 
 const Navbar = () => {
@@ -142,7 +151,7 @@ const Navbar = () => {
                   justifyContent: "space-between",
                   alignItems: "center",
                   position: "relative",
-                  padding: "40px 10%",
+                  padding: "40px 8.3% 40px 10.5%",
                 }
           }
         >
@@ -165,7 +174,14 @@ const Navbar = () => {
                 <NavItem>Gallery</NavItem>
                 <NavItem>Blog</NavItem>
                 <NavItem>
-                  <button>Contact</button>
+                  <ContactBtn
+                    sx={{
+                      fontFamily: "Poppins",
+                      letterSpacing: "1px",
+                    }}
+                  >
+                    Contact
+                  </ContactBtn>
                 </NavItem>
               </NavTablet>
             </nav>
@@ -237,46 +253,62 @@ const Navbar = () => {
         </Box>
         <Box
           sx={
-            width <= 1250 && width > 651
-              ? {
-                  margin: "32px 6%",
-                  display: "flex",
-                  justifyContent: "space-evenly",
-                  alignItems: "center",
-                }
-              : width < 650
+            width <= 800
               ? {
                   display: "flex",
                   flexDirection: "column",
                   alignItems: "center",
                   margin: "30px auto",
                 }
+              : width >= 800 && width < 1200
+              ? {
+                  margin: "32px 6% 32px 6%",
+                  display: "flex",
+                  justifyContent: "space-evenly",
+                  alignItems: "center",
+                }
               : {
                   display: "flex",
                   justifyContent: "space-evenly",
                   alignItems: "center",
-                  margin: "32px 12%",
+                  margin: "32px 12% 32px 13%",
                 }
           }
         >
           <Box
             sx={
-              width <= 650
+              width <= 800
                 ? { width: "100%", padding: "0 32px" }
                 : { width: "50%" }
             }
           >
             <Typography
               variant="h1"
-              sx={{
-                fontSize: "48px",
-                fontWeight: "bold",
-                color: "#091156",
-              }}
+              sx={
+                width >= 800
+                  ? {
+                      fontSize: "48px",
+                      fontWeight: "bold",
+                      color: "#091156",
+                      marginTop: "140px",
+                      fontFamily: "Poppins",
+                      letterSpacing: "1px",
+                      marginBottom: "-10px",
+                    }
+                  : {
+                      fontSize: "48px",
+                      fontWeight: "bold",
+                      color: "#091156",
+                      marginTop: "10px",
+                      fontFamily: "Poppins",
+                      letterSpacing: "1px",
+                      marginBottom: "-10px",
+                    }
+              }
             >
               Clinic & beauty consultant
             </Typography>
-            <Texts className="text-base font-medium text-[#091156] mt-6">
+            <Texts>
               It is a long established fact that a reader will be <br />
               by the readable content of a page.
             </Texts>
@@ -288,6 +320,9 @@ const Navbar = () => {
                     borderRadius: "50px",
                     color: "white",
                     fontWeight: "700",
+                    fontFamily: "Poppins",
+                    paddingTop: "12px",
+                    letterSpacing: "2.2px",
                   }}
                   variant="contained"
                 >
@@ -299,15 +334,14 @@ const Navbar = () => {
 
           <Images
             sx={
-              width <= 650
+              width <= 800
                 ? {
-                    width: "100%",
-                    padding: "0 32px",
-                    marginTop: "32px",
+                    width: "90%",
+                    padding: "0 40px",
+                    margin: "0 auto",
                   }
-                : { width: "50%" }
+                : { width: "50%", marginTop: "90px", marginRight: "8px" }
             }
-            className={width <= 650 ? "w-full px-8 mt-8" : "w-1/2"}
           >
             <ImageItem src={Image} alt="" />
           </Images>

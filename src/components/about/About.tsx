@@ -17,15 +17,27 @@ const theme = createTheme({
 
 const Desc = styled("p")({
   color: "#8b8b8b",
+  fontFamily: "Poppins",
+  marginTop: "20px",
+  letterSpacing: "1.6px",
+  width: "80%",
 });
 
 const Images = styled("img")({});
+const Span = styled("div")({
+  color: "#8b8b8b",
+  fontFamily: "Poppins",
+  marginTop: "18px",
+  letterSpacing: "1.6px",
+  width: "85%",
+});
 
 const Watch = styled("p")({
   fontSize: "16px",
   fontWeight: "600",
   color: "#8b8b8b",
   marginLeft: "20px",
+  fontFamily: "Poppins",
 });
 
 const ImageHome = styled("img")({
@@ -40,7 +52,7 @@ const About = () => {
     <>
       <Box
         sx={
-          width <= 700
+          width <= 800
             ? {
                 display: "flex",
                 justifyContent: "center",
@@ -52,26 +64,28 @@ const About = () => {
                 justifyContent: "space-around",
                 alignItems: "center",
                 flexWrap: "row-wrap",
-                marginTop: "80px",
-                marginLeft: "3%",
+                margin: "80px 5.5% 80px 10.3%",
               }
         }
       >
         <Box
           sx={
-            width <= 700
+            width <= 800
               ? {
                   width: "100%",
                   marginTop: "60px",
-                  padding: "0 6px",
+                  padding: "0 40px",
                 }
               : {
-                  width: "40%",
-                  marginTop: "60px",
+                  width: "50%",
+                  marginTop: "-15px",
                 }
           }
         >
-          <Typography sx={{ fontSize: "16px", fontWeight: "600" }} variant="h6">
+          <Typography
+            sx={{ fontSize: "16px", fontFamily: "Poppins", fontWeight: "600" }}
+            variant="h6"
+          >
             About Us
           </Typography>
           <Typography
@@ -80,6 +94,7 @@ const About = () => {
               fontSize: "36px",
               fontWeight: "600",
               color: "#091156",
+              fontFamily: "Poppins",
               margin: "10px 0",
             }}
           >
@@ -89,15 +104,19 @@ const About = () => {
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit, quam
             suscipit purus donec amet. Egestas volutpat facilisi eu libero.
             Nunc, ipsum ornare mauris sit quam quis enim. Varius tellus in
-            suspendisse placerat. Id dui erat sed quam tellus in purus.
-            Pellentesque congue fringilla cras tellus enim.
+            suspendisse placerat.
           </Desc>
+          <Span>
+            {" "}
+            Id dui erat sed quam tellus in purus. Pellentesque congue fringilla
+            cras tellus enim.
+          </Span>
 
           <Box
             sx={{
               display: "flex",
               alignItems: "center",
-              marginTop: "20px",
+              marginTop: "60px",
             }}
           >
             <ThemeProvider theme={theme}>
@@ -107,10 +126,12 @@ const About = () => {
                   borderRadius: "50px",
                   color: "white",
                   fontWeight: "700",
+                  fontFamily: "Poppins",
+                  letterSpacing: "1.3px",
                 }}
                 variant="contained"
               >
-                More Details
+                Learn More
               </Button>
             </ThemeProvider>
             <Box
@@ -129,10 +150,11 @@ const About = () => {
                   width: "100%",
                 }
               : {
-                  width: "476px",
-                  height: "350px",
+                  width: "630px",
+                  height: "500px",
                   borderRadius: "50px",
-                  marginTop: "100px",
+                  marginTop: "22px",
+                  marginLeft: "-0.6%",
                 }
           }
         >

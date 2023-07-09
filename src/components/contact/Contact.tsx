@@ -25,7 +25,9 @@ const Images = styled("img")();
 
 const Title = styled("p")({
   color: "#8b8b8b",
-  marginTop: "10px",
+  marginTop: "20px",
+  fontFamily: "Poppins",
+  letterSpacing: "1.6px",
 });
 
 const Contact = () => {
@@ -243,15 +245,19 @@ const Contact = () => {
               display: "flex",
               justifyContent: "space-between",
               alignItems: "center",
-              marginRight: "10%",
+              margin: "0 10% 0 1.8%",
             }}
           >
-            <Box sx={{ width: "50%", marginLeft: "10%" }}>
+            <Box sx={{ width: "50%", marginTop: "70px", marginLeft: "10%" }}>
               <img src={ContactBg} alt="" />
             </Box>
-            <Box sx={{ width: "50%" }}>
+            <Box sx={{ width: "50%", marginLeft: "7%", marginTop: "30px" }}>
               <Typography
-                sx={{ fontSize: "16px", fontWeight: "600" }}
+                sx={{
+                  fontSize: "16px",
+                  fontFamily: "Poppins",
+                  fontWeight: "600",
+                }}
                 variant="h6"
               >
                 Contact Us
@@ -259,19 +265,20 @@ const Contact = () => {
               <Typography
                 variant="h4"
                 sx={{
+                  fontFamily: "Poppins",
                   fontSize: "36px",
                   fontWeight: "600",
                   color: "#091156",
+                  width: "70%",
+                  marginTop: "10px",
                 }}
               >
                 Send your inquiry to our expert team
               </Typography>
-              <Title className="text-[#8B8B8B]">
-                Lorem ipsum dolor sit amet nulla turapis tellus.
-              </Title>
+              <Title>Lorem ipsum dolor sit amet nulla turapis tellus.</Title>
               <Box
                 sx={{
-                  marginTop: "40px",
+                  marginTop: "50px",
                 }}
               >
                 <Box
@@ -298,6 +305,9 @@ const Contact = () => {
                       InputProps={{
                         style: {
                           borderRadius: "15px",
+                          letterSpacing: "2px",
+                          paddingLeft: "10px",
+                          fontFamily: "Poppins",
                         },
                       }}
                     />
@@ -305,18 +315,22 @@ const Contact = () => {
                       InputProps={{
                         style: {
                           borderRadius: "15px",
+                          letterSpacing: "2.5px",
+                          fontFamily: "Poppins",
                         },
                       }}
                       color="secondary"
                       focused
                       sx={{
                         width: "242px",
+
                         height: "62px",
                         borderRadius: "15px",
                         borderColor: "#d9ddfe",
                         outline: "none",
                         border: "none",
                         marginLeft: "30px",
+                        paddingLeft: "20px",
                       }}
                       type="text"
                       placeholder="Last name"
@@ -332,15 +346,18 @@ const Contact = () => {
                         width: "100%",
                         height: "62px",
 
-                        marginTop: "30px",
+                        marginTop: "35px",
                         borderRadius: "15px",
                         outline: "none",
                       }}
                       type="text"
-                      placeholder="Subject message"
+                      placeholder="Email address"
                       InputProps={{
                         style: {
+                          paddingLeft: "10px",
                           borderRadius: "15px",
+                          letterSpacing: "1.8px",
+                          fontFamily: "Poppins",
                         },
                       }}
                     />
@@ -348,6 +365,9 @@ const Contact = () => {
                       InputProps={{
                         style: {
                           borderRadius: "15px",
+                          letterSpacing: "1.8px",
+                          paddingLeft: "10px",
+                          fontFamily: "Poppins",
                         },
                       }}
                       color="secondary"
@@ -356,7 +376,7 @@ const Contact = () => {
                         width: "100%",
                         height: "62px",
 
-                        marginTop: "30px",
+                        marginTop: "38px",
                         borderRadius: "15px",
                         outline: "none",
                       }}
@@ -368,11 +388,13 @@ const Contact = () => {
                   <TextareaAutosize
                     style={{
                       width: "100%",
-                      height: "190px",
-                      padding: "20px",
+                      height: "250px",
+                      padding: "30px 20px",
                       marginTop: "32px",
                       borderRadius: "15px",
                       outline: "none",
+                      fontFamily: "Poppins",
+                      letterSpacing: "1.8px",
                       border: "1px solid #D9DDFE",
                     }}
                     typeof="text"
@@ -386,9 +408,12 @@ const Contact = () => {
                   color="primary"
                   sx={{
                     borderRadius: "50px",
+                    width: "250px",
+                    fontFamily: "Poppins",
                     color: "white",
                     fontWeight: "700",
-                    marginTop: "32px",
+                    marginTop: "42px",
+                    letterSpacing: "3px",
                   }}
                   variant="contained"
                 >

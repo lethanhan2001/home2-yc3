@@ -51,6 +51,7 @@ const Title = styled("p")({
   fontSize: "24px",
   fontWeight: "bold",
   color: "#fff",
+  letterSpacing: "3.1px",
 });
 
 const Span = styled("span")({
@@ -58,11 +59,19 @@ const Span = styled("span")({
   fontWeight: "400",
   color: "#d7dbfe",
 });
-
+const Address = styled("a")({
+  fontSize: "14px",
+  letterSpacing: "1.6px",
+  fontWeight: "500",
+  color: "#d7dbfe",
+  textDecoration: "italic",
+});
 const Header = styled("p")({
   fontSize: "18px",
   fontWeight: "600",
   color: "white",
+  fontFamily: "Poppins",
+  letterSpacing: "1px",
 });
 
 const Images = styled("img")();
@@ -72,21 +81,31 @@ const Item = styled("p")({
   fontWeight: "400",
   color: "#d7dbff",
   marginLeft: "10px",
+  fontFamily: "Poppins",
+  letterSpacing: "1.8px",
 });
 
 const CopyRight = styled("p")({
   fontSize: "14px",
   fontWeight: "400",
   color: "#d7dbff",
-  marginTop: "30px",
-
-  width: "350px",
+  marginTop: "20px",
+  fontFamily: "PoppinSs",
+  marginRight: "-10px",
+  letterSpacing: "2.5px",
+  width: "425px",
 });
 
 const Icons = styled("img")({
   width: "25px",
   height: "27.84px",
-  marginRight: "70px",
+  marginRight: "45px",
+});
+const ListIcons = styled("div")({
+  display: "flex",
+  alignItems: "center",
+  marginLeft: "7px",
+  marginTop: "20px",
 });
 
 const Footer = () => {
@@ -328,7 +347,15 @@ const Footer = () => {
                       <Icons src={Instagram} alt="" />
                     </Grid>
                     <Box>
-                      <CopyRight>
+                      <CopyRight
+                        sx={{
+                          textAlign: "center",
+                          fontFamily: "Poppins",
+                          margin: "10px auto",
+                          width: "100%",
+                          padding: "0 20px",
+                        }}
+                      >
                         © AltDesain Studio 2021 - All right reserved.
                       </CopyRight>
                     </Box>
@@ -353,7 +380,7 @@ const Footer = () => {
       ) : (
         <Box
           sx={{
-            marginTop: "100px",
+            marginTop: "70px",
           }}
         >
           <Box
@@ -391,11 +418,16 @@ const Footer = () => {
                           justifyContent: "space-between",
                           alignItems: "center",
                           paddingTop: "200px",
-                          margin: "0 8%",
+                          margin: "0 10.5%",
                         }
                   }
                 >
-                  <Box sx={{ width: "100%" }}>
+                  <Box
+                    sx={{
+                      width: "100%",
+                      marginTop: "6px",
+                    }}
+                  >
                     <Box
                       sx={{
                         display: "flex",
@@ -413,31 +445,56 @@ const Footer = () => {
                     </Box>
                     <Box
                       sx={{
-                        width: "50%",
-                        marginTop: "16px",
+                        width: "90%",
+                        marginTop: "30px",
+                        lineHeight: "20px",
+                        marginLeft: "30px",
                       }}
                     >
-                      <Typography variant="h6" sx={{ color: "#d7dbff" }}>
+                      <Typography
+                        variant="h6"
+                        sx={{ color: "#d7dbff", letterSpacing: "3px" }}
+                      >
                         <Typography
                           variant="h6"
-                          sx={{ fontWeight: "700", display: "inline" }}
+                          sx={{
+                            fontWeight: "700",
+                            display: "inline",
+                            fontFamily: "Poppins",
+                            letterSpacing: "1.5px",
+                            fontSize: "16px",
+                          }}
                           className="font-bold text-[#d7dbff]"
                         >
                           Beautice
                         </Typography>{" "}
                         <Span>is a Beauty Clinic WordPress Theme</Span>.
                       </Typography>
-                      <Span>Baker Steet 101, NY, United States</Span>.
+                      <div
+                        style={{
+                          marginTop: "20px",
+                        }}
+                      >
+                        {" "}
+                        <Address>Baker Steet 101, NY, United States</Address>.
+                      </div>
                       <Box
                         sx={{
                           display: "flex",
                           alignItems: "center",
                           color: "#d7dbff",
-                          marginTop: "20px",
                         }}
                       >
-                        <Typography>+521 569 8966.</Typography>
-                        <Typography sx={{ marginLeft: "16px" }}>
+                        <Typography sx={{ fontFamily: "Poppins" }}>
+                          +521 569 8966.
+                        </Typography>
+                        <Typography
+                          sx={{
+                            marginLeft: "46px",
+                            fontFamily: "Poppins",
+                            textDecoration: "underline",
+                          }}
+                        >
                           mail@company.com.
                         </Typography>
                       </Box>
@@ -446,25 +503,31 @@ const Footer = () => {
 
                   <Box
                     sx={{
-                      width: "50%",
+                      width: "83%",
+                      marginTop: "27px",
                     }}
                   >
                     <Box
                       sx={{
                         display: "flex",
                         justifyContent: "space-between",
+                        marginRight: "2%",
                       }}
                     >
                       <Box>
-                        <Header className="text-white text-lg font-semibold">
+                        <Header
+                          sx={{
+                            marginBottom: "28px",
+                          }}
+                        >
                           Pages
                         </Header>
-                        <Box className="box">
+                        <Box>
                           <Box
                             sx={{
                               display: "flex",
                               alignItems: "center",
-                              margin: "20px 0",
+                              margin: "12px 0",
                             }}
                           >
                             <Images src={Chrev} alt="" />
@@ -474,7 +537,7 @@ const Footer = () => {
                             sx={{
                               display: "flex",
                               alignItems: "center",
-                              margin: "20px 0",
+                              margin: "12px 0",
                             }}
                           >
                             <Images src={Chrev} alt="" />
@@ -484,7 +547,7 @@ const Footer = () => {
                             sx={{
                               display: "flex",
                               alignItems: "center",
-                              margin: "20px 0",
+                              margin: "12px 0",
                             }}
                           >
                             <Images src={Chrev} alt="" />
@@ -494,7 +557,7 @@ const Footer = () => {
                             sx={{
                               display: "flex",
                               alignItems: "center",
-                              margin: "20px 0",
+                              margin: "12px 0",
                             }}
                           >
                             <Images src={Chrev} alt="" />
@@ -504,7 +567,7 @@ const Footer = () => {
                             sx={{
                               display: "flex",
                               alignItems: "center",
-                              margin: "20px 0",
+                              margin: "12px 0",
                             }}
                           >
                             <Images src={Chrev} alt="" />
@@ -513,13 +576,19 @@ const Footer = () => {
                         </Box>
                       </Box>
                       <Box>
-                        <Header>Informations</Header>
+                        <Header
+                          sx={{
+                            marginBottom: "30px",
+                          }}
+                        >
+                          Informations
+                        </Header>
                         <Box className="box">
                           <Box
                             sx={{
                               display: "flex",
                               alignItems: "center",
-                              margin: "20px 0",
+                              margin: "12px 0",
                             }}
                           >
                             <Images src={Chrev} alt="" />
@@ -529,7 +598,7 @@ const Footer = () => {
                             sx={{
                               display: "flex",
                               alignItems: "center",
-                              margin: "20px 0",
+                              margin: "12px 0",
                             }}
                           >
                             <Images src={Chrev} alt="" />
@@ -539,7 +608,7 @@ const Footer = () => {
                             sx={{
                               display: "flex",
                               alignItems: "center",
-                              margin: "20px 0",
+                              margin: "12px 0",
                             }}
                           >
                             <Images src={Chrev} alt="" />
@@ -549,7 +618,7 @@ const Footer = () => {
                             sx={{
                               display: "flex",
                               alignItems: "center",
-                              margin: "20px 0",
+                              margin: "12px 0",
                             }}
                           >
                             <Images src={Chrev} alt="" />
@@ -569,25 +638,27 @@ const Footer = () => {
                   <Box
                     sx={{
                       display: "flex",
-                      justifyContent: "center",
+                      justifyContent: "space-between",
                       alignItems: "center",
                     }}
                   >
-                    <Grid container spacing={5}>
+                    <ListIcons>
                       <Icons src={Facebook} alt="" />
-                      <Icons
-                        sx={{
-                          marginRight: "70px",
-                        }}
-                        src={Twitter}
-                        alt=""
-                      />
+                      <Icons src={Twitter} alt="" />
                       <Icons src={Likedin} alt="" />
                       <Icons src={Youtube} alt="" />
                       <Icons src={Instagram} alt="" />
-                    </Grid>
+                    </ListIcons>
                     <Box>
-                      <CopyRight>
+                      <CopyRight
+                        sx={{
+                          textAlign: "center",
+                          fontFamily: "Poppins",
+                          margin: "10px auto",
+                          width: "100%",
+                          padding: "0 20px",
+                        }}
+                      >
                         © AltDesain Studio 2021 - All right reserved.
                       </CopyRight>
                     </Box>
@@ -596,8 +667,8 @@ const Footer = () => {
                   <Box
                     sx={{
                       position: "absolute",
-                      bottom: "10%",
-                      right: "3%",
+                      bottom: "12%",
+                      right: "4.6%",
                     }}
                   >
                     <Images src={TotopBtn} alt="" />

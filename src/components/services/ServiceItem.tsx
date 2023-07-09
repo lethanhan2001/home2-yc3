@@ -8,7 +8,7 @@ interface ServicesItem {
 
 const BoxServices = styled("div")({
   width: "343px",
-  height: "408px",
+  height: "458px",
   backgroundColor: "white",
   borderRadius: "42px",
   padding: "20px 0",
@@ -17,13 +17,14 @@ const BoxServices = styled("div")({
 
 const Title = styled("span")({
   fontSize: "14px",
-  padding: "0 6px",
+  padding: "0 10%",
   color: "#8B8B8B",
   fontWeight: "400",
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
   marginTop: "20px",
+  letterSpacing: "2px",
 });
 const ImageItem = styled("div")();
 
@@ -39,7 +40,8 @@ const ServiceItem: React.FC<ServicesItem> = ({ item }) => {
             fontSize: "18px",
             fontWeight: "600",
             color: "#091156",
-            marginTop: "50px",
+            marginTop: "55px",
+            letterSpacing: "1.6px",
           }}
           variant="h6"
         >
